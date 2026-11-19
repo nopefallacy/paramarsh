@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Paramarsh — Beyond the Surface</title>
+  <meta name="description" content="Paramarsh is a global sustainable development practice. A short documentary in four chapters about what it takes to make progress meaningful." />
+  <meta name="theme-color" content="#EDE6D6" />
+  <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,301,401&f[]=ranade@300,400,500,301&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+<body>
+  <a class="skiplink" href="#close">Skip the documentary</a>
+
+  <!-- ============================================================ THE ATLAS
+       A survey sheet printed in five plates. The prologue looks at it through
+       a loupe; Competence pulls the plates apart; the epilogue prints it again
+       at night. -->
+  <div class="atlas" id="atlas" aria-hidden="true">
+    <div class="stack" id="stack">
+      <div class="plate" data-plate="base"><canvas></canvas><span class="plate__tab"><b>00</b> Paper</span></div>
+      <div class="plate" data-plate="terrain"><canvas></canvas><span class="plate__tab"><b>01</b> Terrain</span></div>
+      <div class="plate" data-plate="water"><canvas></canvas><span class="plate__tab"><b>02</b> Water &amp; living systems</span></div>
+      <div class="plate" data-plate="people"><canvas></canvas><span class="plate__tab"><b>03</b> People</span></div>
+      <div class="plate" data-plate="econ"><canvas></canvas><span class="plate__tab"><b>04</b> Economy</span></div>
+    </div>
+    <div class="surface" id="surface"><canvas></canvas></div>
+    <div class="loupe" id="loupe"><span class="loupe__cap">look closer</span></div>
+  </div>
+  <canvas id="night" aria-hidden="true"></canvas>
+  <div class="paper-grain" aria-hidden="true"></div>
+
+  <!-- ============================================================ THE SHEET -->
+  <div class="sheet" aria-hidden="true">
+    <i class="reg reg--tl"></i><i class="reg reg--tr"></i><i class="reg reg--bl"></i><i class="reg reg--br"></i>
+  </div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Paramarsh, home">
+      <svg class="mark" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="24" cy="24" r="21.5"/><circle cx="25.4" cy="22.9" r="15.6"/><circle cx="26.5" cy="22" r="10"/><circle cx="27.2" cy="21.4" r="4.9"/>
+        </g>
+        <circle class="mark__light" cx="27.5" cy="21.1" r="2"/>
+      </svg>
+      <span class="brand__word">Paramarsh</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#who">Who we are</a><a href="#what">What we do</a><a href="#how">How we work</a><a href="#work">Our work</a><a href="#careers">Careers</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__skip" href="#close" data-jump="close">Skip the film</a>
+      <a class="btn" href="#contact">Start a conversation</a>
+      <button class="nav__menu" aria-expanded="false" aria-controls="drawer">Menu</button>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer" hidden>
+    <nav aria-label="Mobile">
+      <a href="#who">Who we are</a><a href="#what">What we do</a><a href="#how">How we work</a>
+      <a href="#work">Our work</a><a href="#careers">Careers</a><a href="#contact">Start a conversation</a>
+    </nav>
+  </div>
+
+  <!-- margin of the sheet: where you are, and what time it is -->
+  <nav class="margin" id="margin" aria-label="Chapters of the documentary">
+    <p class="margin__sheet"><span>Sheet</span> <b id="sheet-n">00</b> <span class="margin__name" id="sheet-name">The question</span></p>
+    <ol class="margin__index">
+      <li><a href="#prologue" data-rail="prologue" title="The question">00</a></li>
+      <li><a href="#competence" data-rail="competence" title="Understanding">01</a></li>
+      <li><a href="#consistency" data-rail="consistency" title="Continuity">02</a></li>
+      <li><a href="#transparency" data-rail="transparency" title="Visibility">03</a></li>
+      <li><a href="#benevolence" data-rail="benevolence" title="Human impact">04</a></li>
+      <li><a href="#epilogue" data-rail="epilogue" title="What remains">05</a></li>
+    </ol>
+    <p class="margin__clock"><span class="sun" id="sun"></span><b id="clock">04:52</b> <span id="clock-note">before first light</span></p>
+  </nav>
+
+  <main id="top">
+
+    <!-- ================================================= 00 · PROLOGUE -->
+    <section class="chapter prologue" id="prologue" data-sky="#EDE6D6" data-theme="light" data-clock="04:52-05:46" data-name="The question" data-note="before first light" aria-labelledby="pro-title">
+      <div class="prologue__stage">
+        <p class="beat beat--kicker kicker" data-beat="0,0.14">Paramarsh presents · Beyond the Surface · a documentary in four chapters</p>
+
+        <h1 class="beat beat--title" id="pro-title" data-beat="0,0.17">
+          <span class="t1" data-print>Progress is easy to promise.</span>
+          <span class="t2" data-print="verm">Making it meaningful is harder.</span>
+        </h1>
+
+        <div class="beat beat--far cartouche" data-beat="0.2,0.47">
+          <p class="display-m">From far away, every place looks simple.</p>
+          <p class="far__list">
+            <span>A line on a map.</span>
+            <span>A site on a plan.</span>
+            <span>A figure in a report.</span>
+          </p>
+          <p class="far__hint"><em>Move the glass across the sheet.</em></p>
+        </div>
+
+        <div class="beat beat--near cartouche" data-beat="0.52,0.72">
+          <p class="lede">Come closer and it fills in. Slopes and rivers. Roads and markets. Harvests, homes, the walk to school. People who were here long before any project, and who will be here long after it.</p>
+        </div>
+
+        <div class="beat beat--question cartouche cartouche--big" data-beat="0.76,1.01">
+          <p class="kicker">The question</p>
+          <p class="display-l">So what does it actually take to make development <em>meaningful?</em></p>
+        </div>
+
+        <p class="beat scrollcue" data-beat="0,0.06" aria-hidden="true"><span>Scroll slowly</span><i></i></p>
+      </div>
+    </section>
+
+    <!-- ================================================= THE NAME -->
+    <section class="chapter name" id="name" data-sky="#F0E8D7" data-theme="light" data-clock="05:46-06:10" data-name="A word first" data-note="before first light" aria-labelledby="name-title">
+      <div class="wrap name__grid">
+        <div class="name__word" data-reveal>
+          <p class="kicker">A word before we begin</p>
+          <p class="deva" lang="hi" aria-hidden="true">परामर्श</p>
+          <h2 class="name__latin" id="name-title"><em>parāmarśa</em> <span>from the root <em>mṛś</em>, to touch, to consider</span></h2>
+        </div>
+
+        <div class="name__body" data-reveal>
+          <p class="lede">Our name is an old word. In Hindi today it simply means counsel.</p>
+          <p>But in classical Indian logic it names something more exact: the step of reasoning between <em>seeing</em> and <em>knowing</em>. Smoke rises from a distant hill. No one has seen a flame, yet you understand there is fire. Not a guess. A careful inference from what is visible to what lies beneath it.</p>
+          <p>That is the whole of our work, really. Look at the surface carefully enough to understand what it is telling you, and be honest about which parts you saw and which parts you worked out.</p>
+        </div>
+
+        <figure class="name__figure" data-reveal>
+          <svg viewBox="0 0 560 300" role="img" aria-labelledby="smoke-title">
+            <title id="smoke-title">A hill drawn in solid line with smoke rising from it. Beneath the ridge, a flame drawn in dashed line: the fire nobody has seen but anyone can infer.</title>
+            <g fill="none" stroke="currentColor" stroke-linecap="round">
+              <path class="draw" d="M0 236 C 110 236 170 132 282 128 C 392 124 448 236 560 236" stroke-width="1.5"/>
+              <path class="draw" d="M0 262 C 130 262 190 176 282 172 C 376 168 430 262 560 262" stroke-width="0.9" opacity=".55"/>
+              <path class="draw" d="M0 284 C 150 284 210 214 282 212 C 356 210 410 284 560 284" stroke-width="0.9" opacity=".3"/>
+              <path class="draw smoke" d="M286 118 C 274 98 300 88 290 70 C 280 52 306 44 298 26 C 292 14 304 8 312 4" stroke-width="1.5"/>
+              <path class="flame" d="M270 150 C 262 140 268 126 278 118 C 278 128 284 130 288 124 C 296 132 300 144 292 152 C 286 158 276 158 270 150 Z" stroke-width="1.5" stroke-dasharray="3 4" />
+            </g>
+            <g class="fig-label" fill="currentColor">
+              <text x="322" y="34">Observed — smoke on the hill</text>
+              <line x1="318" y1="30" x2="304" y2="30" stroke="currentColor" stroke-width=".8"/>
+              <text x="322" y="168" class="fig-verm">Inferred — fire, unseen</text>
+              <line x1="318" y1="164" x2="298" y2="150" stroke="currentColor" stroke-width=".8" stroke-dasharray="2 3"/>
+              <text x="30" y="96" class="fig-big">parāmarśa</text>
+              <text x="30" y="116" opacity=".65">the step between them</text>
+            </g>
+          </svg>
+          <figcaption class="legend">
+            <span class="legend__item"><i class="legend__solid"></i>A solid line is something observed or verified.</span>
+            <span class="legend__item"><i class="legend__dash"></i>A dashed line is inferred, illustrative or not yet known.</span>
+            <span class="legend__note">You will see both on this page. We will always tell you which is which.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="wrap fours" data-reveal>
+        <p class="kicker">Index to the sheets</p>
+        <p class="display-m fours__lead">We think meaningful development takes four things, <em>held together.</em></p>
+        <ol class="fours__list">
+          <li><a href="#competence" data-jump="competence"><span class="num">01</span><span class="fours__verb">Understand the ground.</span><span class="fours__name">Competence</span></a></li>
+          <li><a href="#consistency" data-jump="consistency"><span class="num">02</span><span class="fours__verb">Keep the standard.</span><span class="fours__name">Consistency</span></a></li>
+          <li><a href="#transparency" data-jump="transparency"><span class="num">03</span><span class="fours__verb">Show the reasoning.</span><span class="fours__name">Transparency</span></a></li>
+          <li><a href="#benevolence" data-jump="benevolence"><span class="num">04</span><span class="fours__verb">Remember who it is for.</span><span class="fours__name">Benevolence</span></a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================================================= 01 · COMPETENCE -->
+    <section class="chapter scrolly competence" id="competence" data-sky="#F0E8D7" data-theme="light" data-clock="06:10-08:40" data-name="Understanding" data-note="first light" aria-labelledby="comp-title">
+      <div class="scrolly__stage competence__ui">
+        <div class="legend-box" role="group" aria-label="Map legend. Choose which layers to show.">
+          <p class="legend-box__title">Legend <span>select a layer</span></p>
+          <button class="layer" data-layer="terrain" aria-pressed="true">
+            <svg viewBox="0 0 28 14" aria-hidden="true"><path d="M1 11 C 7 3, 14 3, 27 9" fill="none" stroke="#A0623A" stroke-width="1.6"/><path d="M1 13 C 9 7, 16 7, 27 12" fill="none" stroke="#A0623A" stroke-width=".8"/></svg>
+            <span>Terrain</span><small>contours &amp; relief</small>
+          </button>
+          <button class="layer" data-layer="water" aria-pressed="false">
+            <svg viewBox="0 0 28 14" aria-hidden="true"><path d="M1 9 C 6 4, 11 13, 16 8 S 24 5, 27 7" fill="none" stroke="#2F6E95" stroke-width="2"/><circle cx="6" cy="3" r="1.8" fill="none" stroke="#608050" stroke-width=".8"/><circle cx="21" cy="12" r="1.8" fill="none" stroke="#608050" stroke-width=".8"/></svg>
+            <span>Water &amp; living systems</span><small>rivers, forest, fields</small>
+          </button>
+          <button class="layer" data-layer="people" aria-pressed="false">
+            <svg viewBox="0 0 28 14" aria-hidden="true"><rect x="4" y="4" width="3" height="2.6" fill="#CF4A2A"/><rect x="9" y="6" width="3" height="2.6" fill="#CF4A2A" transform="rotate(20 10 7)"/><rect x="6" y="9" width="3" height="2.6" fill="#CF4A2A"/><path d="M14 8 H 27" stroke="#CF4A2A" stroke-dasharray="2.5 2.5"/></svg>
+            <span>People</span><small>homes &amp; worn paths</small>
+          </button>
+          <button class="layer" data-layer="econ" aria-pressed="false">
+            <svg viewBox="0 0 28 14" aria-hidden="true"><path d="M1 7 H 18" stroke="#1F1A14" stroke-width="4"/><path d="M1 7 H 18" stroke="#E2A93A" stroke-width="2.2"/><rect x="20" y="3" width="7" height="7" fill="#F0E8D7" stroke="#1F1A14"/><circle cx="23.5" cy="6.5" r="1.1"/></svg>
+            <span>Economy</span><small>roads &amp; markets</small>
+          </button>
+          <p class="tag">Illustrative terrain, generated for this page. Not a real site.</p>
+        </div>
+      </div>
+
+      <div class="scrolly__steps">
+        <article class="step" data-step="0">
+          <div class="card cartouche">
+            <p class="kicker">Chapter 01 · Competence · 06:10, first light</p>
+            <h2 class="display-l" id="comp-title">Before we act, <em>we understand.</em></h2>
+            <p class="lede">Every challenge has a context. First light shows the shape of the land before it shows anything else.</p>
+            <p>A survey map is never printed in one go. It goes through the press one ink at a time, each plate carrying a different kind of knowledge. Understanding a place works the same way.</p>
+          </div>
+        </article>
+
+        <article class="step" data-step="1">
+          <div class="card cartouche">
+            <p class="kicker"><i class="ink ink--brown"></i>Plate 01 · Terrain</p>
+            <h3 class="display-s">The ground decides more than it is given credit for.</h3>
+            <p>Slope decides where water runs, where a road can go, what a monsoon will do to it. Every brown line is a height. Close together, the land is steep. Far apart, it is gentle enough to farm, to build on, to walk.</p>
+          </div>
+        </article>
+
+        <article class="step" data-step="2">
+          <div class="card cartouche">
+            <p class="kicker"><i class="ink ink--water"></i>Plate 02 · Water &amp; living systems</p>
+            <h3 class="display-s">Rivers and soil are not scenery.</h3>
+            <p>Water finds the lowest line through the land and everything else arranges itself around it. Forests, fields and wetlands are the conditions every decision inherits, and the ones it hands on to whoever comes next.</p>
+          </div>
+        </article>
+
+        <article class="step" data-step="3">
+          <div class="card cartouche">
+            <p class="kicker"><i class="ink ink--verm"></i>Plate 03 · People</p>
+            <h3 class="display-s">Paths exist before plans do.</h3>
+            <p>Where people live, walk, trade and gather. The tracks they have worn between villages over generations. Any new line we draw will cross one of theirs, so we need to know where theirs are first.</p>
+          </div>
+        </article>
+
+        <article class="step" data-step="4">
+          <div class="card cartouche">
+            <p class="kicker"><i class="ink ink--yellow"></i>Plate 04 · Economy</p>
+            <h3 class="display-s">What moves, what it costs, and who can reach it.</h3>
+            <p>Markets, roads and the flow of goods between them. What is possible with the money available, and who is left at the far end of the longest route to the weekly haat.</p>
+          </div>
+        </article>
+
+        <article class="step" data-step="5">
+          <div class="card cartouche">
+            <p class="kicker">All plates, in register</p>
+            <h3 class="display-m">Closer to the truth. <em>Harder to read.</em> That is the point.</h3>
+            <p>A problem seen from one angle is only a rumour of a problem. Meaningful development needs more than good intentions. It needs rigorous research, grounded evidence and people from different disciplines working at the same table, so that every recommendation has a reason behind it.</p>
+            <p class="muted">Competence isn't a claim to know everything. It is the discipline of asking the right questions, using the right evidence, and bringing in the people who understand the parts we don't.</p>
+            <ul class="proof">
+              <li><a href="#how"><span class="proof__k">Method</span> How a study begins <span aria-hidden="true">→</span></a></li>
+              <li><a href="#who"><span class="proof__k">People</span> The disciplines on our team <span aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+        </article>
+
+        <aside class="step step--bridge" data-step="6">
+          <p class="bridge cartouche">Understanding is where it begins. But insight only matters if the same care is carried <em>all the way through.</em></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================================================= 02 · CONSISTENCY -->
+    <section class="chapter scrolly consistency" id="consistency" data-sky="#EEE5D1" data-theme="light" data-clock="08:40-11:56" data-name="Continuity" data-note="morning" aria-labelledby="cons-title">
+      <div class="scrolly__stage split">
+        <div class="split__visual">
+          <div class="rings" id="rings">
+            <canvas class="rings__canvas" aria-hidden="true"></canvas>
+            <div class="rings__stages" role="group" aria-label="Stages of a project cycle">
+              <button class="stage-btn" data-stage="0">Brief</button>
+              <button class="stage-btn" data-stage="1">Research</button>
+              <button class="stage-btn" data-stage="2">Planning</button>
+              <button class="stage-btn" data-stage="3">Implementation</button>
+              <button class="stage-btn" data-stage="4">Evaluation</button>
+              <button class="stage-btn" data-stage="5">Learning</button>
+            </div>
+          </div>
+          <div class="rings__meta" aria-hidden="true"><span>Ring <b id="ring-n">01</b> of 50</span><span>Sun at <b id="ring-t">08:40</b></span></div>
+          <div class="question" aria-live="polite">
+            <p class="kicker"><span id="q-stage">Brief</span> · the question at this stage</p>
+            <p class="question__text" id="q-text">What are we actually being asked, and what should we be asking?</p>
+          </div>
+          <p class="tag">Illustration: each ring is one project cycle, not a record of actual projects.</p>
+        </div>
+      </div>
+
+      <div class="scrolly__steps">
+        <article class="step" data-step="0">
+          <div class="card">
+            <p class="kicker">Chapter 02 · Consistency · the morning moves on</p>
+            <h2 class="display-l" id="cons-title">The standard should <em>never change.</em></h2>
+            <p class="lede">Anyone can do good work once.</p>
+            <p>The real test is whether that standard survives the next project, the next difficulty, and the next fifty decisions after that.</p>
+          </div>
+        </article>
+        <article class="step" data-step="1">
+          <div class="card">
+            <h3 class="display-s">A tree keeps its own record.</h3>
+            <p>Every year it lays down one ring. Wide in the generous years, narrow in the hard ones. But the ring always closes. The weather changes. The way it grows does not.</p>
+            <p class="muted">Watch the sun travel around the rings as you read. The day changes. The structure holds.</p>
+          </div>
+        </article>
+        <article class="step" data-step="2">
+          <div class="card">
+            <h3 class="display-s">Every project is a cycle. <em>Every cycle leaves a ring.</em></h3>
+            <p>Brief, research, planning, implementation, evaluation, learning, and back to the next brief, a little wiser. At each stage there is one question a responsible team should never stop asking. Choose a stage on the ring to see it.</p>
+          </div>
+        </article>
+        <article class="step" data-step="3">
+          <div class="card">
+            <h3 class="display-s">Consistency is not sameness.</h3>
+            <p>It doesn't mean running the same process without judgement. Every place is different, and the work should bend to it. What shouldn't bend is the commitment underneath: to quality, to care, to accountability, to saying what we did and why.</p>
+          </div>
+        </article>
+        <article class="step" data-step="4">
+          <div class="card">
+            <h3 class="display-m">The first project <em>and the fiftieth.</em></h3>
+            <p>Quality shouldn't depend on who happens to be on the project, or how far along it is. It should simply be the way the work is done. The same discipline. The same accountability. The same care.</p>
+            <p class="muted">Trust isn't built by one impressive result. It is built by repeated behaviour, ring after ring.</p>
+            <ul class="proof">
+              <li><a href="#how"><span class="proof__k">Practice</span> How we review our own work <span aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+        </article>
+        <aside class="step step--bridge" data-step="5">
+          <p class="bridge">A dependable process matters. But people should also be able to see <em>how decisions are made inside it.</em></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================================================= 03 · TRANSPARENCY -->
+    <section class="chapter scrolly transparency" id="transparency" data-sky="#F5F0E4" data-theme="light" data-clock="11:56-14:20" data-name="Visibility" data-note="noon, no shadows" aria-labelledby="tr-title">
+      <div class="scrolly__stage split">
+        <div class="split__visual">
+          <div class="section-cut" id="section-cut">
+            <div class="conclusion">
+              <p class="tag">Illustrative example</p>
+              <p class="conclusion__k">The conclusion</p>
+              <p class="conclusion__text">Route the new access road along the eastern ridge.</p>
+            </div>
+            <svg class="strata" id="strata" viewBox="0 0 800 520" role="group" aria-label="Cross-section of the reasoning beneath a conclusion"></svg>
+          </div>
+          <div class="stratum-panel" aria-live="polite">
+            <p class="kicker"><span id="sp-n">01</span> · <span id="sp-name">Methods</span></p>
+            <p class="stratum-panel__lead" id="sp-lead">How the question was approached and tested.</p>
+            <p class="stratum-panel__eg"><span class="eg">In this example</span> <span id="sp-eg"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrolly__steps">
+        <article class="step" data-step="0">
+          <div class="card">
+            <p class="kicker">Chapter 03 · Transparency · 12:00, noon</p>
+            <h2 class="display-l" id="tr-title">Nothing important <em>should be hidden.</em></h2>
+            <p class="lede">At noon, nothing casts a long shadow.</p>
+            <p>You shouldn't have to take our word for it. You should be able to see the reasoning behind the work: what informed a decision, where the information came from, and what the evidence actually says.</p>
+          </div>
+        </article>
+        <article class="step" data-step="1">
+          <div class="card">
+            <h3 class="display-s">A conclusion looks like a clean surface.</h3>
+            <p>A recommendation, a figure, a line on a plan. It looks finished. Underneath, there is always more: the method that produced it, the sources it rests on, the judgement calls, and the things nobody could know for certain. So let's cut it open.</p>
+          </div>
+        </article>
+        <article class="step" data-step="2" data-stratum="0"><div class="card card--min"><p class="kicker">Stratum 01</p><h3 class="display-s">Methods</h3><p>How it was studied, and why that way.</p></div></article>
+        <article class="step" data-step="3" data-stratum="1"><div class="card card--min"><p class="kicker">Stratum 02</p><h3 class="display-s">Sources</h3><p>Where it came from, and how much weight it can bear.</p></div></article>
+        <article class="step" data-step="4" data-stratum="2"><div class="card card--min"><p class="kicker">Stratum 03</p><h3 class="display-s">Decisions</h3><p>Where evidence ended and judgement began.</p></div></article>
+        <article class="step" data-step="5" data-stratum="3">
+          <div class="card card--min">
+            <p class="kicker">Stratum 04</p>
+            <h3 class="display-s">Limitations</h3>
+            <p>Geologists draw a boundary they have not seen as a dashed line, and mark it with a question mark. We think reports should do the same.</p>
+          </div>
+        </article>
+        <article class="step" data-step="6">
+          <div class="card">
+            <h3 class="display-m">Not perfect answers. <em>Honest ones.</em></h3>
+            <p>Transparency isn't about presenting work as flawless. It is about being clear on how we got there, what we know, and what we don't. You should never have to accept a conclusion without being able to see how it was reached.</p>
+            <ul class="proof">
+              <li><a href="#how"><span class="proof__k">Practice</span> How we document sources and limits <span aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+        </article>
+        <aside class="step step--bridge" data-step="7">
+          <p class="bridge">Knowing how a decision was made matters. But the most important question is <em>who lives with it.</em></p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================================================= 04 · BENEVOLENCE -->
+    <section class="chapter scrolly benevolence" id="benevolence" data-sky="#EFD9B4" data-theme="warm" data-clock="16:50-18:40" data-name="Human impact" data-note="golden hour" aria-labelledby="ben-title">
+      <div class="scrolly__stage split">
+        <div class="split__visual">
+          <div class="ripple" id="ripple">
+            <canvas class="ripple__canvas" aria-hidden="true"></canvas>
+            <div class="ripple__zones" role="group" aria-label="Who a decision reaches">
+              <button class="zone-btn" data-zone="0">One person</button>
+              <button class="zone-btn" data-zone="1">A community</button>
+              <button class="zone-btn" data-zone="2">The world around</button>
+            </div>
+          </div>
+          <div class="zone-panel" aria-live="polite">
+            <p class="kicker" id="zp-name">Who a decision reaches</p>
+            <p class="zone-panel__text" id="zp-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="scrolly__steps">
+        <article class="step" data-step="0">
+          <div class="card">
+            <p class="kicker">Chapter 04 · Benevolence · 17:40, golden hour</p>
+            <h2 class="display-l" id="ben-title">Development is ultimately <em>about people.</em></h2>
+            <p class="lede">Behind every project, there are people.</p>
+            <p>People whose lives are shaped by decisions made in rooms they may never enter. Late light is kind to faces. It is the hour to look at who is actually here.</p>
+          </div>
+        </article>
+        <article class="step" data-step="1">
+          <div class="card">
+            <h3 class="display-s">A decision is a stone dropped into water.</h3>
+            <p>It never lands in only one place. It reaches a person first, then the people around them, then the land and water they all depend on. Up close, the rings start to look like a fingerprint. Every decision lands on someone in particular.</p>
+          </div>
+        </article>
+        <article class="step" data-step="2" data-zone="0">
+          <div class="card card--min"><p class="kicker">The first ring</p><h3 class="display-s">One person</h3><p>Their access, their safety, their time, their ordinary day.</p></div>
+        </article>
+        <article class="step" data-step="3" data-zone="1">
+          <div class="card card--min"><p class="kicker">The second ring</p><h3 class="display-s">A community</h3><p>Who gains, who pays, and who wasn't asked. The dashed circles are the voices not yet heard.</p></div>
+        </article>
+        <article class="step" data-step="4" data-zone="2">
+          <div class="card card--min"><p class="kicker">The third ring</p><h3 class="display-s">The world around</h3><p>Rivers, soil, air and seasons. The things that will still be here in thirty years.</p></div>
+        </article>
+        <article class="step" data-step="5">
+          <div class="card">
+            <h3 class="display-m">Who does this help, <em>and what does it change for them?</em></h3>
+            <p>Their interests belong at the beginning, not in an appendix. An idea can't be judged only by its return, or by how impressive it looks on paper. Every decision has trade-offs, and some of them are hard. Taking them seriously, early, on behalf of the people who carry them, is what we mean by benevolence.</p>
+            <ul class="proof">
+              <li><a href="#work"><span class="proof__k">Practice</span> How we listen to the people a project affects <span aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+        </article>
+        <aside class="step step--bridge" data-step="6">
+          <p class="bridge">Four principles. <em>One responsibility:</em> to make progress meaningful.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================================================= 05 · EPILOGUE -->
+    <section class="chapter epilogue" id="epilogue" data-sky="#121A2C" data-theme="dark" data-clock="19:40-20:30" data-name="What remains" data-note="dusk, lights on" aria-labelledby="epi-title">
+      <div class="epilogue__stage">
+        <div class="beat" data-beat="0.02,0.2">
+          <p class="kicker">Chapter 05 · What progress leaves behind · 20:15, dusk</p>
+          <h2 class="display-l" id="epi-title">Look again at the land <em>we started with.</em></h2>
+        </div>
+        <div class="beat" data-beat="0.24,0.42">
+          <p class="display-xl">It was never <em>empty.</em></p>
+        </div>
+        <div class="beat beat--narrow" data-beat="0.46,0.64">
+          <p class="lede">Every light is a home, a shop, a clinic, a classroom. Someone studying late. Someone waiting up for someone to come home.</p>
+        </div>
+        <div class="beat beat--narrow" data-beat="0.67,0.8">
+          <p class="lede">The red marks on the map this morning. They will live with what we leave behind long after the work is finished and the reports are filed.</p>
+          <p class="hint">Move across the land. Look closer and there are more of them.</p>
+        </div>
+        <blockquote class="beat beat--quote" data-beat="0.83,1.01">
+          <p>The work is never just about what we build. It is about <em>how</em> we build it, <em>why</em> we build it, and <em>who it serves.</em></p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ================================================= CLOSE -->
+    <section class="close" id="close" data-sky="#F0E8D7" data-theme="light" data-clock="20:30-20:30" data-name="Colophon" data-note="after dark" aria-labelledby="close-title">
+      <div class="wrap close__grid">
+        <div class="close__mark" aria-hidden="true">
+          <svg viewBox="0 0 400 400" class="bigmark">
+            <g fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="200" cy="200" r="180"/><circle cx="212" cy="191" r="130"/><circle cx="221" cy="183" r="83"/><circle cx="227" cy="178" r="41"/>
+            </g>
+            <circle class="bigmark__light" cx="229.5" cy="175.5" r="12"/>
+          </svg>
+          <ol class="bigmark__key">
+            <li><b>Outer ring</b> Competence, the ground</li>
+            <li><b>Second</b> Consistency, the standard</li>
+            <li><b>Third</b> Transparency, the reasoning</li>
+            <li><b>Fourth</b> Benevolence, the people</li>
+            <li><b>The light</b> Who it is all for</li>
+          </ol>
+        </div>
+
+        <div class="close__text">
+          <p class="kicker">Four principles, held together</p>
+          <h2 class="display-l" id="close-title">Meaningful progress needs more than good intentions. <em>It needs a better way of working.</em></h2>
+          <dl class="pillars">
+            <div><dt>Competence</dt><dd>to understand the ground.</dd></div>
+            <div><dt>Consistency</dt><dd>to keep the standard.</dd></div>
+            <div><dt>Transparency</dt><dd>to show the reasoning.</dd></div>
+            <div><dt>Benevolence</dt><dd>to remember who it is for.</dd></div>
+          </dl>
+          <p class="muted">None of them is enough alone. Understanding without standards drifts. Standards without openness can't be checked. And all of it is beside the point if it forgets the people at the centre.</p>
+
+          <p class="close__invite display-m" id="contact">Let's build something <em>meaningful</em> together.</p>
+          <div class="ctas">
+            <a class="cta cta--primary" href="#contact"><span class="cta__k">For clients &amp; partners</span><span class="cta__t">Start a conversation</span><span class="cta__a" aria-hidden="true">→</span></a>
+            <a class="cta" href="#work"><span class="cta__k">Projects &amp; evidence</span><span class="cta__t">Explore our work</span><span class="cta__a" aria-hidden="true">→</span></a>
+            <a class="cta" href="#who"><span class="cta__k">The organisation</span><span class="cta__t">Who we are</span><span class="cta__a" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer wrap">
+        <div class="footer__brand">
+          <p class="footer__word">Paramarsh</p>
+          <p class="footer__sub">Global Sustainable Development</p>
+        </div>
+        <nav class="footer__cols" aria-label="Footer">
+          <div><p>Organisation</p><a href="#who">Who we are</a><a href="#careers">Careers</a><a href="#contact">Contact</a></div>
+          <div><p>Practice</p><a href="#what">What we do</a><a href="#how">How we work</a><a href="#work">Our work</a></div>
+          <div><p>This page</p><a href="brand.html">Brand foundations</a><a href="#prologue" data-jump="prologue">Watch again from the start</a><button class="motion-toggle" id="motion-toggle" aria-pressed="false">Reduce motion</button></div>
+        </nav>
+        <p class="footer__fine">Colophon. Set in Zodiak and Ranade, from the Indian Type Foundry, with Eczar for Devanagari. Maps on this page are generated and illustrative. Solid lines mark what is observed; dashed lines mark what is inferred.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Vercel link (local only)
+.vercel
+
+# Internal brief documents stay out of the repo
+*.pdf
+*.docx
+
+# OS / editor noise
+.DS_Store

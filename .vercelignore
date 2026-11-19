@@ -1,0 +1,5 @@
+# Internal brief documents and local tooling stay off the public site
+*.pdf
+*.docx
+.claude
+README.md

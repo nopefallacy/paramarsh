@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "paramarsh", "runtimeExecutable": "python3", "runtimeArgs": [".claude/serve.py", "5318"], "port": 5318 }
+  ]
+}

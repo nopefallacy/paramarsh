@@ -1,0 +1,50 @@
+/* ==========================================================================
+   PARAMARSH — Design tokens
+   The site is a printed survey sheet. Paper, and five inks: one per layer of
+   meaning. The paper changes with the light of the day as you read.
+   ========================================================================== */
+
+:root {
+  /* — Paper through the day --------------------------------------------- */
+  --dawn:     #EDE6D6;  /* 04:52  the question            */
+  --paper:    #F0E8D7;  /* buff survey paper              */
+  --morning:  #EEE5D1;  /* 09:00  consistency             */
+  --noon:     #F5F0E4;  /* 12:00  transparency            */
+  --golden:   #EFD9B4;  /* 17:40  benevolence             */
+  --night:    #121A2C;  /* 20:15  the night sheet         */
+  --paper-2:  #E6DCC6;  /* panels, cartouche shadow       */
+
+  /* — The five inks ------------------------------------------------------ */
+  --ink:      #1F1A14;  /* key plate: words, roads' casing  */
+  --brown:    #A0623A;  /* terrain: contours               */
+  --water:    #2F6E95;  /* water                           */
+  --green:    #608050;  /* living systems                  */
+  --verm:     #CF4A2A;  /* people: sindoor vermilion        */
+  --verm-dk:  #B23A1E;  /* vermilion for small text         */
+  --yellow:   #E2A93A;  /* economy: road fill               */
+  --ember:    #F4C77B;  /* a lit window at night            */
+
+  --ink-soft: #5E5446;
+  --ink-faint: rgba(31, 26, 20, .14);
+  --chalk:    #EEE6D4;
+
+  /* — Type: Indian Type Foundry ------------------------------------------ */
+  --f-display: "Zodiak", "Iowan Old Style", Georgia, serif;
+  --f-body:    "Ranade", "Avenir Next", "Helvetica Neue", sans-serif;
+  --f-deva:    "Eczar", "Kohinoor Devanagari", serif;
+
+  --t-hero:  clamp(2.9rem, 7vw, 7.6rem);
+  --t-xl:    clamp(2.6rem, 5.8vw, 6rem);
+  --t-l:     clamp(2.1rem, 4vw, 4.1rem);
+  --t-m:     clamp(1.65rem, 2.6vw, 2.7rem);
+  --t-s:     clamp(1.35rem, 1.8vw, 1.8rem);
+  --t-lede:  clamp(1.12rem, 0.5vw + 0.98rem, 1.38rem);
+  --t-body:  clamp(1rem, 0.2vw + 0.95rem, 1.1rem);
+  --t-label: 0.7rem;
+
+  --edge:    14px;   /* the neatline inset */
+  --gutter:  clamp(20px, 4.2vw, 72px);
+  --measure: 34rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-press: cubic-bezier(0.7, 0, 0.2, 1);
+}
